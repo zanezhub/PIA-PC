@@ -2,11 +2,11 @@
 ## Instrucciones del PIA.
 - [ ] Escribe un script que realice al menos 5 tareas de Ciberseguridad y cumpla los siguientes tópicos: 
     - [ ] Cada tarea debe funcionar correctamente y no tener errores de ningún tipo ( 50% - 10% cada tarea ).
-    - [ ] Manejo de excepciones ( 10% )
+    - [X] Manejo de excepciones ( 10% )
     - [ ] Uso de logging, al menos en modo INFO, en el proyecto ( 10% )
-    - [ ] Uso de argparse
+    - [X] Uso de argparse
         - [ ] Debe de existir una forma de introducir argumentos para hacer una ejecución "desatendida" del script, a manera opcional tener un menú para complementar o al final de la ejecución. ( **Obligatorio** que se tenga argumentos de entrada )
-        - [ ] Se debe incluir documentación que proporcione el argumento -h ( 10% )
+        - [X] Se debe incluir documentación que proporcione el argumento -h ( 10% )
     - [ ] Uso de socket ( 10% )
     - [ ] Consultar una API relacionada con seguridad informática ( **Obligatorio** )
     - [ ] Usar un módulo no nativo de Python ( que requiera instalarse con PIP 5% )
@@ -26,9 +26,9 @@
 - [X] Sacar claves hash de archivos, luego revisar de nuevo las claves hash de un archivo para ver si cambiaron.
     * Puede usar parametros de entrada.
     ```
-    pia.py -hash -f nombre_de_archivo 
+    pia.py -d hash -f nombre_de_archivo 
     ```
 - [ ] Mover eliminar archivos.
 - [ ] Copiar archivos
 - [ ] Eliminar archivos.
-- [ ]
+- [ ] ?
