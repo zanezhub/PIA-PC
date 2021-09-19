@@ -9,13 +9,13 @@ Puedes verificar que la información de un archivo no haya sido modificada, no i
 
 #### Instrucciones de uso:
 ```
-python3 pia.py -d hash -f nombre_archivo
+$ python3 pia.py -d hash -f nombre_archivo
 ```
 La bandera **-d** se usa para elegir el programa que quieres usar que en este caso será **hash**, luego la bandera **-f** se usa para elegir el archivo del que quieres saber el hash.
 
 #### Ejemplo:
 ```
-python3 pia.py -d hash -f pia.py
+$ python3 pia.py -d hash -f pia.py
 ```
 Vamos a sacar el hash del archivo [pia.py](pia.py) del commit **0196c59**.
 ```
@@ -31,7 +31,7 @@ El **API** que se usa en este script es **[Email Verification](https://hunter.io
 
 #### Instrucciones de uso:
 ```
-python3 pia.py -d api
+$ python3 pia.py -d api
 ```
 La bandera **-d** se usa para elegir el programa que quieres usar que en este caso será **api**. 
 
@@ -97,8 +97,8 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
     ```
     pia.py -d hash -f nombre_de_archivo 
     ```
-- [ ] Mover eliminar archivos.
 - [X] Usar **Hunter API.**
+- [ ] Mover eliminar archivos.
 - [ ] Copiar archivos
 - [ ] Eliminar archivos.
 
