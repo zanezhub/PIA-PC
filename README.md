@@ -24,7 +24,7 @@ $ MD5: 7275e5ed4acfe4b1f3f861874dc251a9
 ```
 El hash del archivo [pia.py](pia.py) es **7275e5ed4acfe4b1f3f861874dc251a9**. Si ejecutas el algoritmo en el mismo archivo del commit que se indicó anteriormente el hash siempre será el mismo. En commits más recientes el hash será diferente ya que el script probablemente ya ha sido modificado múltiples veces.
 
-### 2. Hunter API.
+### 2. [Hunter API](https://hunter.io/)
 <img src="images/hunter_logo.png" width="150" height="150"> 
 
 El **API** que se usa en este script es **[Email Verification](https://hunter.io/verify)**.
@@ -82,7 +82,7 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
     - [X] Consultar una API relacionada con seguridad informática ( **Obligatorio** )
     - [ ] Usar un módulo no nativo de Python ( que requiera instalarse con PIP 5% )
     - [X] Usar al menos un módulo de Python que no hayamos visto en clase y que esté relacionado con Ciberseguridad, desarrollo de una rutina de código que haga alguna función que pueda ayudarnos con seguridad o uso de un módulo que con su aplicación podamos realizar alguna tarea de ciberseguridad ( **Obligatorio** )
-    - [ ] Que se genere reportes, en al menos una de las tareas de ciberseguridad, en formato html, xlx(x) o txt. Directamente el uso del logging no cuenta, a menos que además del logging regular implementen otro archivo para generar el reporte ( **Obligatorio** )
+    - [X] Que se genere reportes, en al menos una de las tareas de ciberseguridad, en formato html, xlx(x) o txt. Directamente el uso del logging no cuenta, a menos que además del logging regular implementen otro archivo para generar el reporte ( **Obligatorio** )
     - [X] El script debe estar integrado por al menos 3 módulos ( **Obligatorio** ): 
         - [ ] 2 archivos.py, donde uno debe de tener la función main ( **Obligatorio** )
         - [ ] Un archivo de PS/BASH, que sea invocado desde Python ( **Obligatorio** )
@@ -91,6 +91,8 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
 - [ ] Publicar el proyecto en Github - Incluir todos los archivos de código, la documentación y el archivo requirements.txt ( **Obligatorio** )
 
 ## Ideas:
+[2/5]
+
 ### 5 tareas de Ciberseguridad:
 - [X] Sacar claves hash de archivos, luego revisar de nuevo las claves hash de un archivo para ver si cambiaron.
     * Puede usar parametros de entrada.
@@ -98,6 +100,9 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
     pia.py -d hash -f nombre_de_archivo 
     ```
 - [X] Usar **Hunter API.**
+- [ ] SHODAN.
+- [ ] Encriptar archivos.
+- [ ] Usar sockets para buscar paginas web para ver IP's de las paginas. (modulo)
 - [ ] Mover eliminar archivos.
 - [ ] Copiar archivos
 - [ ] Eliminar archivos.
@@ -110,3 +115,5 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
 url = "https://api.hunter.io/v2/email-verifier?email=zanez@protonmail.com&api_key=bd225a89d94f014d3fb98a7b6c2ecacf5be105dc"
 ```
 Tal vez agregar manejo de errores y actualizar instrucciones de uso.
+
+(-ω-、) Ya no lo soporto. ( ╥ω╥ )
