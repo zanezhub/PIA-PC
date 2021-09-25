@@ -1,4 +1,4 @@
-# PIA.
+# PIA (･ัω･ั)
 ## El Script.
 
 ### 1. Hash con MD5.
@@ -69,6 +69,32 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
 * https://hunter.io/blog/how-to-verify-email-address/
 * https://help.hunter.io/en/articles1935168-what-checks-are-performed-on-an-email-with-the-email-verifier
 
+### Base64
+La codificación **Base64** es una forma de tomar datos binarios y convertirlos en texto para que se transmitan más fácilmente en cosas como correo electrónico y datos de formularios HTML.
+
+#### 3. Encoder:
+```
+$ python3 pia.py -d encoder
+```
+Este comando va a ejecutar un script de bash que realizará todo el algoritmo.
+```
+$ python3 pia.py -d encoder
+Introduce el nombre del archivo: <nombre_del_archivo>
+```
+Esto va a generar un archivo llamado: **archivo_encoded.64**.
+
+
+#### 4. Decoder:
+```
+$ python3 pia.py -d decoder
+```
+Este comando va a ejecutar un script de bash que realizará todo el algoritmo.
+```
+$ python3 pia.py -d decoder
+Introduce el nombre del archivo: <nombre_del_archivo>
+```
+Esto va a generar un archivo llamado: **archivo_decoded.64**.
+
 
 ## Instrucciones del PIA.
 - [ ] Escribe un script que realice al menos 5 tareas de Ciberseguridad y cumpla los siguientes tópicos: 
@@ -85,13 +111,18 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
     - [X] Que se genere reportes, en al menos una de las tareas de ciberseguridad, en formato html, xlx(x) o txt. Directamente el uso del logging no cuenta, a menos que además del logging regular implementen otro archivo para generar el reporte ( **Obligatorio** )
     - [X] El script debe estar integrado por al menos 3 módulos ( **Obligatorio** ): 
         - [ ] 2 archivos.py, donde uno debe de tener la función main ( **Obligatorio** )
-        - [ ] Un archivo de PS/BASH, que sea invocado desde Python ( **Obligatorio** )
+        - [X] Un archivo de PS/BASH, que sea invocado desde Python ( **Obligatorio** )
 - [ ] Incluye un documento breve ( Word o txt ) con las instrucciones de uso ( 10% )
     - [X] Documentación en Github ( 15% )
-- [ ] Publicar el proyecto en Github - Incluir todos los archivos de código, la documentación y el archivo requirements.txt ( **Obligatorio** )
+- [X] Publicar el proyecto en Github - Incluir todos los archivos de código, la documentación y el archivo requirements.txt ( **Obligatorio** )
 
 ## Ideas:
-[2/5]
+[4/5]
+1. Hash
+2. Hunter API
+3. Encoder Base64
+4. Coder Base64
+5. (･ัω･ั)???
 
 ### 5 tareas de Ciberseguridad:
 - [X] Sacar claves hash de archivos, luego revisar de nuevo las claves hash de un archivo para ver si cambiaron.
@@ -100,8 +131,10 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
     pia.py -d hash -f nombre_de_archivo 
     ```
 - [X] Usar **Hunter API.**
+- [X] Encriptar archivos con base64.
+- [X] Desencriptar archivos base64.
+
 - [ ] SHODAN.
-- [ ] Encriptar archivos.
 - [ ] Usar sockets para buscar paginas web para ver IP's de las paginas. (modulo)
 - [ ] Mover eliminar archivos.
 - [ ] Copiar archivos
@@ -115,5 +148,8 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
 url = "https://api.hunter.io/v2/email-verifier?email=zanez@protonmail.com&api_key=bd225a89d94f014d3fb98a7b6c2ecacf5be105dc"
 ```
 Tal vez agregar manejo de errores y actualizar instrucciones de uso.
+
+### Requirements.txt
+pipreqs
 
 (-ω-、) Ya no lo soporto. ( ╥ω╥ )

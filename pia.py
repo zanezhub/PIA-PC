@@ -4,21 +4,22 @@
 import time
 import argparse
 import hashlib
-import requests
 import json
+import requests
+import subprocess
 
 #Se usa para que sea más entendible y corto el nombre.
 parser = argparse.ArgumentParser() 
 parser.add_argument('-d', nargs=1, type=str, help='elige la función a usar.',
-                    choices=['hash', 'api'])
+                    choices=['hash', 'api', 'encoder', 'decoder'])
 parser.add_argument('-f', '--file', nargs=1 ,type=str, help='nombre del archivo.')
 parser.add_argument('-m', '--mail', nargs=1, type=str, help='nombre del correo que deseas buscar.')
 
-def Hash():    
+def Hash():
     BUF_SIZE = 65536 # Se usa para leer archivos en 64kb
     md5 = hashlib.md5()
     #manejo de errores.
-    try: 
+    try:
         with open(args.file[0], 'rb') as f:
             while True:
                 data = f.read(BUF_SIZE)
@@ -35,12 +36,10 @@ def Hash():
 
     except FileNotFoundError:
         print("No se encontró el archivo.")
-
     except TypeError:
         print("No se eligió la bandera -f.")
 
-def ApiSec():
-
+def api_sec():
     try:
         mail = args.mail[0]
         url = f"https://api.hunter.io/v2/email-verifier?email={mail}&api_key=bd225a89d94f014d3fb98a7b6c2ecacf5be105dc"
@@ -51,13 +50,14 @@ def ApiSec():
         print("Email: " + data['data']['email']\
             + "\nWebmail: " + str(data['data']['webmail']) + "\n"\
             + "\nResultado: " + data['data']['result']\
-                + "\nPuntuación: " + str(data['data']['score'])\
-                    + "\nCorreo basura: " + str(data['data']['gibberish'])\
-                            + "\nCorreo desechable: " + str(data['data']['disposable'])\
-                                + "\nMX Records: " + str(data['data']['mx_records'])\
-                                    + "\nPresencia de SMTP Server: " + str(data['data']['smtp_server'])\
-                                        + "\nSMTP Check: " + str(data['data']['smtp_check'])\
-                                                + "\nAccept All: " + str(data['data']['accept_all']) )
+            + "\nPuntuación: " + str(data['data']['score'])\
+            + "\nCorreo basura: " + str(data['data']['gibberish'])\
+            + "\nCorreo desechable: " + str(data['data']['disposable'])\
+            + "\nMX Records: " + str(data['data']['mx_records'])\
+            + "\nPresencia de SMTP Server: " + str(data['data']['smtp_server'])\
+            + "\nSMTP Check: " + str(data['data']['smtp_check'])\
+            + "\nAccept All: " + str(data['data']['accept_all']) )
+
     except TypeError:
         print("No se eligió la bandera -m.")
 
@@ -67,9 +67,13 @@ args = parser.parse_args() # args es igual a una función del módulo. Se usa pa
 try:
     if args.d[0] == 'hash':
         Hash()
-
     elif args.d[0] == 'api':
-        ApiSec()
+        api_sec()
+
+    elif args.d[0] == 'encoder':
+        subprocess.run(["bash", "encoder.sh"])
+    elif args.d[0] == 'decoder':
+        subprocess.run(["bash", "decoder.sh"])
 
 except TypeError:
     print("ERROR. Elige un programa y usa las banderas correctas del mismo.")
