@@ -11,16 +11,20 @@ import subprocess
 #Se usa para que sea más entendible y corto el nombre.
 parser = argparse.ArgumentParser() 
 parser.add_argument('-d', nargs=1, type=str, help='elige la función a usar.',
-                    choices=['hash', 'api', 'encoder', 'decoder', 'cve'])
+                    choices=['hash', 'hunter', 'encoder', 'decoder', 'cve'])
 parser.add_argument('-f', '--file', nargs=1 ,type=str, help='nombre del archivo.')
 parser.add_argument('-m', '--mail', nargs=1, type=str, help='nombre del correo que deseas buscar.')
+parser.add_argument('-k', '--key', nargs=1, type=str, help='usa tu propia api key para la api de hunter.io')
+parser.add_argument('-e', '--empresa', nargs=1, type=str, help='ingresa el nombre de la empresa que quieres investigar')
+parser.add_argument('-p', '--page', nargs=1, type=int, help='ingresa el número de la página que quieres obtener')
+parser.add_argument('-a', '--auth', nargs=2, type=str, help='ingesa tu usuario y contraseña para poder usar la api')
 
 args = parser.parse_args() # args es igual a una función del módulo. Se usa para que sea más corta.
+
 
 #manejo de errores por si no elige un programa.
 try:
     if args.d[0] == 'hash':
-
         BUF_SIZE = 65535 # Se usa para leer archivos en 64kb
         md5 = hashlib.md5()
         #manejo de errores.
@@ -43,13 +47,13 @@ try:
         except TypeError:
             print("No se eligió la bandera -f.")
 
-
-    elif args.d[0] == 'api':
-
+    elif args.d[0] == 'hunter':
         try:
             mail = args.mail[0]
-            url = f"https://api.hunter.io/v2/email-verifier?email={mail}&api_key=bd225a89d94f014d3fb98a7b6c2ecacf5be105dc"
+            key = args.key[0]
+            # bd225a89d94f014d3fb98a7b6c2ecacf5be105dc
 
+            url = f"https://api.hunter.io/v2/email-verifier?email={mail}&api_key={key}"
             response = requests.get(url).text
             data = json.loads(response)
 
@@ -64,12 +68,10 @@ try:
                 + "\nSMTP Check: " + str(data['data']['smtp_check'])\
                 + "\nAccept All: " + str(data['data']['accept_all']) )
         except TypeError:
-            print("No se eligió la bandera -m.")
-
+            print("No se eligieron banderas correctos o faltan algunos argumentos.")
 
     elif args.d[0] == 'cve':
-
-        response = requests.get("https://www.opencve.io/api/vendors/apple/cve", auth=('username', 'password')).text
+        response = requests.get(f"https://www.opencve.io/api/vendors/{args.empresa[0]}/cve?page={args.page[0]}", auth=(args.auth[0], args.auth[1])).text
         data = json.loads(response)
 
         x = 0

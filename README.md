@@ -1,4 +1,9 @@
-# PIA (･ัω･ั)
+# PIA
+## Help:
+Ingresa el siguiente comando en tu terminal si tienes alguna duda acerca de las --flags que usa el script y para qué sirve cada una:
+```
+$ python3 pia.py -h
+```
 
 ## 1. Hash con MD5.
 ### Importancia de los Hash.
@@ -30,9 +35,12 @@ El **API** que se usa en este script es **[Email Verification](https://hunter.io
 
 ### Instrucciones de uso:
 ```
-$ python3 pia.py -d api
+$ python3 pia.py -d hunter -m <email@example.com> -k <api-key>
 ```
-La bandera **-d** se usa para elegir el programa que quieres usar que en este caso será **api**. 
+La bandera **-d** se usa para elegir el programa que quieres usar que en este caso será **api**, **-m** se usará para elegir el email y **-k** se usará para elegir el API key que quieres utilizar. 
+
+#### API KEY:
+Si deseas utilizar el script ten en cuenta que necesitas poseer una API Key de la página, podrás obtener una si te registrar en la misma.
 
 ### ¿Por qué es importante esta API?
 No importa si estás mandando un email relacionado con una campaña o si mandas un correo común y corriente. Lo primero que se debe hacer es revisar la veracidad de los correos.
@@ -75,7 +83,6 @@ Introduce el nombre del archivo: <nombre_del_archivo>
 ```
 Esto va a generar un archivo llamado: **archivo_encoded.64**.
 
-
 #### 4. Decoder:
 ```
 $ python3 pia.py -d decoder
@@ -102,9 +109,14 @@ Las CVE tienen descripción de la vulnerabilidad, qué versiones del software es
 
 ### Instrucciones de uso:
 ```
-$ python3 pia.py -d cve 
+$ python3 pia.py -d cve -e <empresa> -p <pagina> -a <usuario> <contraseña>
 ```
+* **-a**: La autentificación sirve para que la API te pueda dar los permisos adecuados para acceder al REST API que proporciona, en este caso tendrás que registrarse en la página e ingresar en el script tu usuario y contraseña.
 
+### Ejemplo:
+```
+$ python3 pia.py -d cve -e apple -p 1 -a <usuario> <contraseña>
+```
 Si ejecutas este comando en tu terminal el **output** que te dará será el siguiente:
 
 ```
