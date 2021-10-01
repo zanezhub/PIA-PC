@@ -24,7 +24,7 @@ $ MD5: 7275e5ed4acfe4b1f3f861874dc251a9
 El hash del archivo [pia.py](https://github.com/zanezhub/PIA-PC/blob/0196c59c88353e11926853e6f9463932f4864f97/pia.py) es **7275e5ed4acfe4b1f3f861874dc251a9**. Si ejecutas el algoritmo en el mismo archivo del commit que se indicó anteriormente el hash siempre será el mismo. En commits más recientes el hash será diferente ya que el script probablemente ya ha sido modificado múltiples veces.
 
 ## 2. [Hunter API](https://hunter.io/)
-<img src="images/hunter_logo.png" width="150" height="150"> 
+<img src="img/hunter_logo.png" width="150" height="150"> 
 
 El **API** que se usa en este script es **[Email Verification](https://hunter.io/verify)**.
 
