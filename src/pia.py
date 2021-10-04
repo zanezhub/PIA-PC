@@ -77,7 +77,8 @@ try:
         x = 0
         while True:
             try:
-                print(data[x]['id'] + "  -  " + data[x]['created_at'])
+                print(data[x]['id'])
+                print("Publicado en: " + data[x]['created_at'] + "  -  "  + "Actualizado en: " + data[x]['updated_at'])
                 print(data[x]['summary']+"\n")
                 x += 1
             except IndexError:
