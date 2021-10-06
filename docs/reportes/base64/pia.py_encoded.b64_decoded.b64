@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 # Se usan más de 3 módulos.
-import hashlib  # Módulo no visto en clase.
 import argparse
-import logging
-
-from json       import loads
-from requests   import get
-from time       import asctime, localtime, time
+import hashlib # Módulo no visto en clase.
+from json import loads
+from requests import get
+from time import asctime, localtime, time
 from subprocess import run
 
 #Se usa para que sea más entendible y corto el nombre.
@@ -22,9 +20,10 @@ parser.add_argument('-p', '--page', nargs=1, type=int, help='ingresa el número 
 parser.add_argument('-a', '--auth', nargs=2, type=str, help='ingesa tu usuario y contraseña para poder usar la api')
 
 args = parser.parse_args() # args es igual a una función del módulo. Se usa para que sea más corta.
-logging.basicConfig(filename='hash.log', format='%(levelname)s | %(asctime)s - %(message)s', level=logging.DEBUG)
 
-try:  #manejo de errores por si no elige un programa.
+
+#manejo de errores por si no elige un programa.
+try:
     if args.d[0] == 'hash':
         BUF_SIZE = 65535 # Se usa para leer archivos en 64kb
         md5 = hashlib.md5()
@@ -41,15 +40,12 @@ try:  #manejo de errores por si no elige un programa.
 
             #GUARDAR TODO EN UN ARCHIVO
             localtime = asctime( localtime(time()) )
-            with open("hashes.txt", 'a') as r:
+            with open("reporte.txt", 'a') as r:
                 r.write(localtime+"\n"+args.file[-1]+"\nMD5: {0}".format(md5.hexdigest())+"\n\n")
-            logging.info('El script se utilizó correctamente')
-
         except FileNotFoundError:
-            logging.critical('No se encontró el archivo.')
-
+            print("No se encontró el archivo.")
         except TypeError:
-            logging.critical('No se usaron las banderas necesarias.')
+            print("No se eligió la bandera -f.")
 
     elif args.d[0] == 'hunter':
         try:
