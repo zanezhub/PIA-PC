@@ -96,15 +96,15 @@ Si tu puntaje es alto, es muy probable que tu proveedor de Internet ( **ISP** ) 
 ## Base64
 La codificación **Base64** es una forma de tomar datos binarios y convertirlos en texto para que se transmitan más fácilmente en cosas como correo electrónico y datos de formularios HTML.
 
-#### 3. Encoder:
-##### Instrucciones:
+### 3. Encoder:
+#### Instrucciones:
 ```
 $ python3 pia.py -d encoder
 Introduce el nombre del archivo: <nombre_del_archivo>
 ```
 Ingresas el nombre del archivo que deseas y todo el algoritmo se realizará por sí mismo. Dando como resultado un archivo llamado: **<nombre_del_archivo>_encoded.64**
 
-##### Ejemplo
+#### Ejemplo:
 ```
 $ python3 pia.py -d encoder
 Introduce el nombre del archivo: pia.py
@@ -184,15 +184,15 @@ c2giXSkKCmV4Y2VwdCBUeXBlRXJyb3I6CiAgICBwcmludCgiRVJST1IuIEVsaWdlIHVuIHByb2dy
 YW1hIHkgdXNhIGxhcyBiYW5kZXJhcyBjb3JyZWN0YXMgZGVsIG1pc21vLiIpCg==
 ```
 
-#### 4. Decoder:
-##### Instrucciones:
+### 4. Decoder:
+#### Instrucciones:
 ```
 $ python3 pia.py -d decoder
 Introduce el nombre del archivo: <nombre_del_archivo>
 ```
 Ingresas el nombre del archivo que deseas y todo el algoritmo se realizará por sí mismo. Dando como resultado un archivo llamado: **<nombre_del_archivo>_decoded.64**
 
-##### Ejemplo:
+#### Ejemplo:
 Tomando todo el output del ejemplo anterior ([**pia.py_encoded.b64**](docs/reportes/base64/pia.py_encoded.b64)) y ejecutando el siguiente comando sobre él:
 ```
 $ python3 pia.py -d decoder
@@ -245,119 +245,9 @@ escalation vulnerability in the AGSService installer. An authenticated attacker 
 leverage this vulnerability to achieve read / write privileges to execute arbitrary code.
 User interaction is required to abuse this vulnerability.
 
-CVE-2021-40702
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-04T13:57:00Z
-Adobe Premiere Elements version 2021.2235820 (and earlier) is affected by a memory 
-corruption vulnerability due to insecure handling of a malicious psd file, potentially 
-resulting in arbitrary code execution in the context of the current user. 
-User interaction is required to exploit this vulnerability.
-
-CVE-2021-40703
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-04T13:53:00Z
-Adobe Premiere Elements version 2021.2235820 (and earlier) is affected by a memory corruption
-vulnerability due to insecure handling of a malicious m4a file, potentially resulting in arbitrary
-code execution in the context of the current user. User interaction is required to exploit this vulnerability.
-
-CVE-2021-40701
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-04T13:51:00Z
-Adobe Premiere Elements version 2021.2235820 (and earlier) is affected by a memory 
-corruption vulnerability due to insecure handling of a malicious m4a file, potentially
-resulting in arbitrary code execution in the context of the current user. 
-User interaction is required to exploit this vulnerability.
-
-CVE-2021-40700
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-04T13:51:00Z
-Adobe Premiere Elements version 2021.2235820 (and earlier) is affected by a 
-memory corruption vulnerability due to insecure handling of a malicious TIFF file, 
-potentially resulting in arbitrary code execution in the context of the current user. 
-User interaction is required to exploit this vulnerability.
-
-CVE-2021-30858
-Publicado en: 2021-08-24T19:15:00Z  -  Actualizado en: 2021-10-04T03:15:00Z
-A use after free issue was addressed with improved memory management. 
-This issue is fixed in iOS 14.8 and iPadOS 14.8, macOS Big Sur 11.6. 
-Processing maliciously crafted web content may lead to arbitrary code execution. 
-Apple is aware of a report that this issue may have been actively exploited.
-
-CVE-2021-39821
-Publicado en: 2021-09-29T16:15:00Z  -  Actualizado en: 2021-10-03T00:10:00Z
-Adobe InDesign versions 16.3 (and earlier), and 16.3.1 (and earlier) are affected 
-by an out-of-bounds write vulnerability that could result in arbitrary code execution 
-in the context of the current user. Exploitation of this issue requires user interaction 
-in that a victim must open a malicious TIF file.
-
-CVE-2021-28547
-Publicado en: 2021-09-29T16:15:00Z  -  Actualizado en: 2021-10-03T00:07:00Z
-Adobe Creative Cloud Desktop Application for macOS version 5.3 (and earlier) is 
-affected by a privilege escalation vulnerability that could allow a normal user to 
-delete the OOBE directory and get permissions of any directory under the administrator authority.
-
-CVE-2021-39246
-Publicado en: 2021-09-24T19:15:00Z  -  Actualizado en: 2021-10-01T13:00:00Z
-Tor Browser through 10.5.6 and 11.x through 11.0a4 allows a correlation attack 
-that can compromise the privacy of visits to v2 onion addresses. 
-Exact timestamps of these onion-service visits are logged locally, and an attacker might be able 
-to compare them to timestamp data collected by the destination server 
-(or collected by a rogue site within the Tor network).
-
-CVE-2021-40709
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-01T12:50:00Z
-Adobe Photoshop versions 21.2.11 (and earlier) and 22.5 (and earlier) are affected by a 
-Buffer Overflow vulnerability when parsing a specially crafted SVG file. 
-An unauthenticated attacker could leverage this vulnerability to achieve 
-arbitrary code execution in the context of the current user. Exploitation of this issue requires 
-user interaction in that a victim must open a malicious file.
-
-CVE-2021-39828
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-01T12:39:00Z
-Adobe Digital Editions 4.5.11.187646 (and earlier) are affected by a privilege escalation 
-vulnerability in the Digital Editions installer. An authenticated attacker could leverage 
-this vulnerability to escalate privileges. User interaction is required before product 
-installation to abuse this vulnerability.
-
-CVE-2021-39827
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-01T12:36:00Z
-Adobe Digital Editions 4.5.11.187646 (and earlier) are affected by an arbitrary
-file write vulnerability in the Digital Editions installer. 
-An authenticated attacker could leverage this vulnerability to write an a
-rbitrary file to the system. User interaction is required before product installation to abuse this vulnerability.
-
-CVE-2021-39826
-Publicado en: 2021-09-27T16:15:00Z  -  Actualizado en: 2021-10-01T11:59:00Z
-Adobe Digital Editions 4.5.11.187646 (and earlier) are affected by an arbitrary 
-command execution vulnerability. An authenticated attacker could leverage this 
-vulnerability to execute arbitrary commands. User interaction is required to abuse this
-vulnerability in that a user must open a maliciously crafted .epub file.
-
-CVE-2021-30583
-Publicado en: 2021-08-03T20:15:00Z  -  Actualizado en: 2021-09-24T23:15:00Z
-Insufficient policy enforcement in image handling in iOS in Google Chrome on iOS 
-prior to 92.0.4515.107 allowed a remote attacker to leak cross-origin data via a crafted HTML page.
-
-CVE-2021-30860
-Publicado en: 2021-08-24T19:15:00Z  -  Actualizado en: 2021-09-24T16:15:00Z
-An integer overflow was addressed with improved input validation. 
-This issue is fixed in Security Update 2021-005 Catalina, iOS 14.8 and 
-iPadOS 14.8, macOS Big Sur 11.6, watchOS 7.6.2. Processing a maliciously 
-crafted PDF may lead to arbitrary code execution. Apple is aware of a report that this issue
-may have been actively exploited.
-
-CVE-2021-1855
-Publicado en: 2021-09-08T15:15:00Z  -  Actualizado en: 2021-09-23T20:35:00Z
-A logic issue was addressed with improved state management. This issue is fixed in 
-macOS Big Sur 11.3. A malicious website may be able to force unnecessary network connections to fetch its favicon.
-
-CVE-2019-15166
-Publicado en: 2019-10-03T17:15:00Z  -  Actualizado en: 2021-09-23T20:15:00Z
-lmp_print_data_link_subobjs() in print-lmp.c in tcpdump before 4.9.3 lacks certain bounds checks.
-
-CVE-2020-8284
-Publicado en: 2020-12-14T20:15:00Z  -  Actualizado en: 2021-09-23T13:56:00Z
-A malicious server can use the FTP PASV response to trick curl 7.73.0 and 
-earlier into connecting back to a given IP address and port, and this way potentially 
-make curl extract information about services that are otherwise private and not disclosed, 
-for example doing port scanning and service banner extractions.
+....
 ```
+
 [**CVE de Apple de la primera página.**](docs/reportes/cve/CVE_TEST4_PAG1.txt)
 
 Como puedes ver en el **output** tiene la siguiente forma:
@@ -377,4 +267,4 @@ La descripción te dirá una descripción de la vulnerabilidad, si tiene una sol
 * Página web: https://www.opencve.io/welcome
 * Documentación de API: https://docs.opencve.io/api/
 
-<img alt="OpenCVE" src="img/da-dog.jpg" width="100" height="125">
+<img src="img/walter.jpg" width="300" height="300">

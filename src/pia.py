@@ -47,7 +47,6 @@ try:  #manejo de errores por si no elige un programa.
 
         except FileNotFoundError:
             logging.critical('No se encontró el archivo.')
-
         except TypeError:
             logging.critical('No se usaron las banderas necesarias.')
 
@@ -56,6 +55,7 @@ try:  #manejo de errores por si no elige un programa.
             mail = args.mail[0]
             key = args.key[0]
             # bd225a89d94f014d3fb98a7b6c2ecacf5be105dc
+
             url = f"https://api.hunter.io/v2/email-verifier?email={mail}&api_key={key}"
             response = get(url).text
             data = loads(response)
@@ -69,7 +69,6 @@ try:  #manejo de errores por si no elige un programa.
                 + "\nPresencia de SMTP Server: " + str(data['data']['smtp_server'])\
                 + "\nSMTP Check: " + str(data['data']['smtp_check'])\
                 + "\nAccept All: " + str(data['data']['accept_all']) )
-
         except TypeError:
             print("No se eligieron banderas correctos o faltan algunos argumentos.")
 
