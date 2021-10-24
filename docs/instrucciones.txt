@@ -1,0 +1,20 @@
+1. Hash con MD5:
+$ python3 pia.py -d hash -f nombre_archivo
+
+2. Hunter API:
+$ python3 pia.py -d hunter -m <email@example.com> -k <api-key>
+
+Base 64:
+3. Encoder:
+$ python3 pia.py -d encoder
+Introduce el nombre del archivo: <nombre_del_archivo>
+
+4. Decoder: 
+$ python3 pia.py -d decoder
+Introduce el nombre del archivo: <nombre_del_archivo>
+
+5. OpenCVE API:
+$ python3 pia.py -d cve -e <empresa> -p <pagina> -a <usuario> <contraseña>
+
+6. BuiltWith:
+$ python3 pia.py -d bw -w <pagina web>

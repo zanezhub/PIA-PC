@@ -1,0 +1,80 @@
+CVE-2021-30830
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T19:37:00Z
+A memory corruption issue was addressed with improved memory handling. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A malicious application may be able to execute arbitrary code with kernel privileges.
+
+CVE-2021-30832
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T19:16:00Z
+A memory corruption issue was addressed with improved state management. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A local attacker may be able to elevate their privileges.
+
+CVE-2021-30829
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:56:00Z
+A URI parsing issue was addressed with improved parsing. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A local user may be able to execute arbitrary files.
+
+CVE-2021-30846
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:54:00Z
+A memory corruption issue was addressed with improved memory handling. This issue is fixed in iOS 14.8 and iPadOS 14.8, Safari 15, tvOS 15, iOS 15 and iPadOS 15, watchOS 8. Processing maliciously crafted web content may lead to arbitrary code execution.
+
+CVE-2021-30844
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:47:00Z
+A logic issue was addressed with improved state management. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A remote attacker may be able to leak memory.
+
+CVE-2021-30845
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:17:00Z
+An out-of-bounds read was addressed with improved bounds checking. This issue is fixed in macOS Big Sur 11.6. A local user may be able to read kernel memory.
+
+CVE-2021-30828
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:13:00Z
+This issue was addressed with improved checks. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A local user may be able to read arbitrary files as root.
+
+CVE-2021-30827
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:08:00Z
+A permissions issue existed. This issue was addressed with improved permission validation. This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. A local attacker may be able to elevate their privileges.
+
+CVE-2020-29622
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T17:19:00Z
+A race condition was addressed with additional validation. This issue is fixed in Security Update 2021-005 Catalina. Mounting a maliciously crafted NFS network share may lead to arbitrary code execution with system privileges.
+
+CVE-2021-40728
+Publicado en: 2021-10-15T15:15:00Z  -  Actualizado en: 2021-10-21T21:14:00Z
+Adobe Acrobat Reader DC version 21.007.20095 (and earlier), 21.007.20096 (and earlier), 20.004.30015 (and earlier), and 17.011.30202 (and earlier) is affected by a use-after-free vulnerability in the processing of the GetURL function on a global object window that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.
+
+CVE-2021-40729
+Publicado en: 2021-10-15T15:15:00Z  -  Actualizado en: 2021-10-21T19:41:00Z
+Adobe Acrobat Reader DC version 21.007.20095 (and earlier), 21.007.20096 (and earlier), 20.004.30015 (and earlier), and 17.011.30202 (and earlier) is affected by a out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to bypass mitigations such as ASLR. Exploitation of this issue requires user interaction in that a victim must open a malicious PDF file.
+
+CVE-2021-40730
+Publicado en: 2021-10-15T15:15:00Z  -  Actualizado en: 2021-10-21T19:28:00Z
+Adobe Acrobat Reader DC version 21.007.20095 (and earlier), 21.007.20096 (and earlier), 20.004.30015 (and earlier), and 17.011.30202 (and earlier) is affected by a use-after-free that allow a remote attacker to disclose sensitive information on affected installations of of Adobe Acrobat Reader DC. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The specific flaw exists within the parsing of JPG2000 images.
+
+CVE-2021-40731
+Publicado en: 2021-10-15T15:15:00Z  -  Actualizado en: 2021-10-21T15:24:00Z
+Adobe Acrobat Reader DC version 21.007.20095 (and earlier), 21.007.20096 (and earlier), 20.004.30015 (and earlier), and 17.011.30202 (and earlier) is affected by an out-of-bounds write vulnerability when parsing a crafted JPEG2000 file, which could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.
+
+CVE-2021-30838
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T22:11:00Z
+A memory corruption issue was addressed with improved memory handling. This issue is fixed in iOS 15 and iPadOS 15. A malicious application may be able to execute arbitrary code with system privileges on devices with an Apple Neural Engine.
+
+CVE-2021-30837
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T22:11:00Z
+A memory consumption issue was addressed with improved memory handling. This issue is fixed in iOS 15 and iPadOS 15, watchOS 8, tvOS 15. An application may be able to execute arbitrary code with kernel privileges.
+
+CVE-2021-30810
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T22:10:00Z
+An authorization issue was addressed with improved state management. This issue is fixed in iOS 15 and iPadOS 15, watchOS 8, tvOS 15. An attacker in physical proximity may be able to force a user onto a malicious Wi-Fi network during device setup.
+
+CVE-2021-30815
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T22:00:00Z
+A lock screen issue allowed access to contacts on a locked device. This issue was addressed with improved state management. This issue is fixed in iOS 15 and iPadOS 15. A local attacker may be able to view contacts from the lock screen.
+
+CVE-2021-30820
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T21:56:00Z
+A logic issue was addressed with improved state management. This issue is fixed in iOS 14.8 and iPadOS 14.8. A remote attacker may be able to cause arbitrary code execution.
+
+CVE-2021-30819
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T21:56:00Z
+An out-of-bounds read was addressed with improved input validation. This issue is fixed in iOS 15 and iPadOS 15. Processing a maliciously crafted USD file may disclose memory contents.
+
+CVE-2021-30826
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-20T21:56:00Z
+A logic issue was addressed with improved state management. This issue is fixed in iOS 15 and iPadOS 15. In certain situations, the baseband would fail to enable integrity and ciphering protection.
+

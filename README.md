@@ -7,9 +7,17 @@ $ python3 pia.py -h
 | Temas |
 |-------|
 | [Hash con MD5](#1-hash-con-md5)|
-| [Hunter API](#2-hunter-api)  |
-| [Base64](#base64)  |
+| [Hunter API](#2-hunter-api)    |
+| [Base64](#base64)              |
 | [OpenCVE API](#5-opencve-api)  |
+| [BuiltWith](#6-builtwith)      |
+
+## Tabla de carpetas:
+| Carpetas  | Descripción |
+|-----------|-------------|
+| [docs](docs) | En esta carpeta se guarda la documentación como las instrucciones y el [output de los scripts](docs/reportes).  |
+| [img](img) | Aquí están algunas capturas de pantalla donde se muestran algunas etapas de programación.  |
+| [src](src) | En esta carpeta residen el archivo [main](src/main.py) que será necesario ejecutar si quieres acceder a la funcionalidad de cualquier programa.  |
 
 ## Tabla de archivos:
 | Archivos | Descripción |
@@ -19,6 +27,7 @@ $ python3 pia.py -h
 | [decoder.sh](src/decoder.sh) | Este script está hecho con Bash y se usará para obtener la información de un archivo que tenga esté cifrado con el algoritmo de Base64. |
 | [encoder.sh](src/encoder.sh) | Este script igualmente está hecho con Bash y se utilizará para encodear cualquier archivo que desees con el algoritmo de Base64. |
 | [CVE_TEST4.mp4](docs/vids/CVE_TEST4.mp4)  | Este en un archivo mp4, en el video está una demostración del funcionamiento correcto del API de [**OpenCVE**](https://github.com/zanezhub/PIA-PC#5-opencve-api), la demostración usa los comandos de ejemplo.  |
+| [instrucciones.txt](docs/instrucciones.txt)  | Un archivo txt bastante breve que menciona las instrucciones de uso de la manera más simple.   |
 
 ## 1. Hash con MD5.
 ### Importancia de los Hash.
@@ -225,30 +234,45 @@ $ python3 pia.py -d cve -e apple -p 1 -a <usuario> <contraseña>
 ```
 [**Video de demostración.**](docs/vids/CVE_TEST4.mp4)
 
-Si ejecutas este comando en tu terminal el **output** que te dará será el siguiente:
+Si ejecutas este comando en tu terminal se creará un archivo llamado: [CVE - Mes Día Hora Año.txt](docs/reportes/cve/CVE%20-%20Sat%20Oct%2023%2018:39:31%202021.txt) y el **output** que te dará será el siguiente:
 ```
-CVE-2021-1810
-Publicado en: 2021-09-08T15:15:00Z  -  Actualizado en: 2021-10-04T18:15:00Z
-A logic issue was addressed with improved state management. 
-This issue is fixed in macOS Big Sur 11.3, Security Update 2021-002 Catalina. 
-A malicious application may bypass Gatekeeper checks.
+CVE-2021-30845
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:17:00Z
+An out-of-bounds read was addressed with improved bounds checking. 
+This issue is fixed in macOS Big Sur 11.6. A local user may be able to read kernel memory.
 
-CVE-2021-3747
-Publicado en: 2021-10-01T03:15:00Z  -  Actualizado en: 2021-10-04T17:59:00Z
-The MacOS version of Multipass, version 1.7.0, fixed in 1.7.2, accidentally 
-installed the application directory with incorrect owner.
+CVE-2021-30828
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:13:00Z
+This issue was addressed with improved checks. 
+This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6. 
+A local user may be able to read arbitrary files as root.
 
-CVE-2021-40708
-Publicado en: 2021-09-29T16:15:00Z  -  Actualizado en: 2021-10-04T16:02:00Z
-Adobe Genuine Service versions 7.3 (and earlier) are affected by a privilege 
-escalation vulnerability in the AGSService installer. An authenticated attacker could 
-leverage this vulnerability to achieve read / write privileges to execute arbitrary code.
-User interaction is required to abuse this vulnerability.
+CVE-2021-30827
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T18:08:00Z
+A permissions issue existed. 
+This issue was addressed with improved permission validation.
+This issue is fixed in Security Update 2021-005 Catalina, macOS Big Sur 11.6.
+A local attacker may be able to elevate their privileges.
+
+CVE-2020-29622
+Publicado en: 2021-10-19T14:15:00Z  -  Actualizado en: 2021-10-22T17:19:00Z
+A race condition was addressed with additional validation.
+This issue is fixed in Security Update 2021-005 Catalina.
+Mounting a maliciously crafted NFS network share may lead to arbitrary 
+code execution with system privileges.
+
+CVE-2021-40728
+Publicado en: 2021-10-15T15:15:00Z  -  Actualizado en: 2021-10-21T21:14:00Z
+Adobe Acrobat Reader DC version 21.007.20095 (and earlier), 21.007.20096 (and earlier),
+20.004.30015 (and earlier), and 17.011.30202 (and earlier)
+is affected by a use-after-free vulnerability in the processing 
+of the GetURL function on a global object window that could result in 
+arbitrary code execution in the context of the current user. Exploitation of 
+this issue requires user interaction in that a victim must open a malicious file.
 
 ....
 ```
-
-[**CVE de Apple de la primera página.**](docs/reportes/cve/CVE_TEST4_PAG1.txt)
+[**CVE de Apple de la primera página.**](docs/reportes/cve/CVE%20-%20Sat%20Oct%2023%2018:39:31%202021.txt)
 
 Como puedes ver en el **output** tiene la siguiente forma:
 ```
@@ -256,15 +280,52 @@ CVE-ID
 Publicado en: Fecha en la que la vulnerabilidad fue publicada  -  Actualizado en: Fecha en la que se actualizó
 Resumen de la vulnerabilidad
 ```
+
 Si estas interesado en saber más acerca de esta vulnerabilidad lo único que tienes que hacer es buscar el **CVE-ID** y empezar a investigar todo lo relacionado con ello, siempre habrá blogs acerca de la vulnerabilidad explicando a detalle cómo funciona, qué afecta y cómo se puede recrear.
 
 La fecha en la que una vulnerabilidad fue actualizada generalmente tiene que ver con los patches para las vulnerabilidades que fueron descubiertas, los patches se aplican en el software para corregir todos los errores/vulenrabilidades del mismo.
 
-La descripción te dirá una descripción de la vulnerabilidad, si tiene una solución, cuándo se arregló si es que ya se ha solucionado, lo que se puede hacer con la vulnerabilidad (si es que se puede ejecutar código remoto) y si es necesario que un usuario interactue para que se pueda usar. No siempre se muestra esta información, pero lo de que puedes estar seguro es que siempre habrá un resumen para cada vulnerabilidad.
+Te dirá una descripción de la vulnerabilidad, si tiene una solución, cuándo se arregló si es que ya se ha solucionado, lo que se puede hacer con la vulnerabilidad (si es que se puede ejecutar código remoto) y si es necesario que un usuario interactue para que se pueda usar. No siempre se muestra esta información, pero lo de que puedes estar seguro es que siempre habrá un resumen para cada vulnerabilidad.
 
 ### Links:
 * Github: https://github.com/opencve/opencve
 * Página web: https://www.opencve.io/welcome
 * Documentación de API: https://docs.opencve.io/api/
+
+## 6. BuiltWith
+Detecta la tecnología utilizada por un sitio web, como Apache, JQuery y Wordpress. Posiblemente sea necesario tener alguna idea general de qué tipo de tecnologías utiliza un sitio web antes de intentar realizar cualquier tipo de pentest para saber si una página puede ser susceptible a un ataque de algún tipo.
+
+### Instrucciones de uso:
+Para utilizar este script tendrás que tener instalado el módulo [builtwith](https://pypi.org/project/builtwith/), si no la tienes la podrás instalar con:
+```
+pip install builtwith
+```
+
+```
+$ python3 pia.py -d bw -w <pagina web>
+```
+
+### Ejemplo:
+```
+$ python3 pia.py -d bw -w https://www.uanl.mx
+```
+Cuando se ejecute este script el [output](docs/reportes/builtwith/uanl.txt) será el siguiente:
+```
+web-servers -> ['Nginx']
+photo-galleries -> ['Lightbox', 'jQuery', 'OWL Carousel']
+javascript-frameworks -> ['Lightbox', 'jQuery']
+widgets -> ['OWL Carousel']
+web-frameworks -> ['Twitter Bootstrap']
+cms -> ['WordPress']
+programming-languages -> ['PHP']
+blogs -> ['PHP', 'WordPress']
+marketing-automation -> ['Yoast SEO']
+```
+
+Links:
+* https://pypi.org/project/builtwith/
+* https://github.com/richardpenman/builtwith
+
+---
 
 <img src="img/walter.jpg" width="300" height="300">
