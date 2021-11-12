@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import argparse
+from colored import fg, bg, attr
+
 #Se usa para que sea más entendible y corto el nombre.
 parser = argparse.ArgumentParser() 
 parser.add_argument('-d', nargs=1, type=str, help='elige la función a usar.',
@@ -43,8 +45,10 @@ try:  #manejo de errores por si no elige un programa.
 
         except FileNotFoundError:
             logging.critical('No se encontró el archivo.')
+            print ('%s%s ERROR !!! %s' % (fg(0), bg(196), attr('bold')))
         except TypeError:
             logging.critical('No se usaron las banderas necesarias.')
+            print ('%s%s ERROR!!! %s' % (fg(0), bg(196), attr('bold')))
 
     elif args.d[0] == 'hunter':
         from json       import loads
@@ -88,8 +92,8 @@ try:  #manejo de errores por si no elige un programa.
             print(key, "->",value)
 
     elif args.d[0] == 'esc':
-        import prueba
-        prueba.ip()
+        import puertos
+        puertos.ip()
 
     elif args.d[0] == 'encoder':
         from subprocess import run
@@ -101,4 +105,4 @@ try:  #manejo de errores por si no elige un programa.
 
     
 except TypeError:
-    print("ERROR. Elige un programa y usa las banderas correctas del mismo.")
+    print ('%s%s%s ERROR. Elige un programa y usa las banderas correctas!!! ' % (fg(0), bg(196), attr(1)))

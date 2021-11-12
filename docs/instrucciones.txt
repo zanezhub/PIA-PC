@@ -19,3 +19,5 @@ $ python3 pia.py -d cve -e <empresa> -p <pagina> -a <usuario> <contraseña>
 6. BuiltWith:
 $ python3 pia.py -d bw -w <pagina web>
 
+7. Escaneo de puertos:
+$ python3 pia.py -d esc

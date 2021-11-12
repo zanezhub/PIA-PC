@@ -11,6 +11,7 @@ $ python3 pia.py -h
 | [Base64](#base64)              |
 | [OpenCVE API](#5-opencve-api)  |
 | [BuiltWith](#6-builtwith)      |
+| [Socket](#7-escaneo-de-puertos)|
 
 ## Tabla de carpetas:
 | Carpetas  | Descripción |
