@@ -326,6 +326,21 @@ Links:
 * https://pypi.org/project/builtwith/
 * https://github.com/richardpenman/builtwith
 
+## 7. Escaneo de puertos:
+### Instrucciones de uso:
+```
+$ python3 pia.py -d esc
+```
+Al ejecutar este comando se importará un script y el output será el siguiente:
+
+```
+Agrega la ip:
+Agrega el puerto en el que quieres empezar a escanear:
+Agrega el puerto en el que quieres terminar:
+```
+
+Una vez hayas llenado todos los datos que te piden el script empezará a escanear puertos y te dirá cuáles están abiertos y cuáles están cerrados.
+
 ---
 
 <img src="img/walter.jpg" width="300" height="300">

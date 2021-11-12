@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 import argparse
-from json       import loads
-from requests   import get
-
 #Se usa para que sea más entendible y corto el nombre.
 parser = argparse.ArgumentParser() 
 parser.add_argument('-d', nargs=1, type=str, help='elige la función a usar.',
-                    choices=['hash', 'hunter', 'encoder', 'decoder', 'cve', 'bw'])
+                    choices=['hash', 'hunter', 'encoder', 'decoder', 'cve', 'bw', 'esc'])
 parser.add_argument('-f', '--file', nargs=1 ,type=str, help='nombre del archivo.')
 parser.add_argument('-m', '--mail', nargs=1, type=str, help='nombre del correo que deseas buscar.')
 parser.add_argument('-k', '--key', nargs=1, type=str, help='usa tu propia api key para la api de hunter.io.')
@@ -50,6 +47,8 @@ try:  #manejo de errores por si no elige un programa.
             logging.critical('No se usaron las banderas necesarias.')
 
     elif args.d[0] == 'hunter':
+        from json       import loads
+        from requests   import get
         try:
             mail = args.mail[0]
             key = args.key[0]
@@ -63,7 +62,10 @@ try:  #manejo de errores por si no elige un programa.
             print("No se eligieron banderas correctos o faltan algunos argumentos.")
 
     elif args.d[0] == 'cve':
+        from json       import loads
+        from requests   import get
         from time       import asctime, localtime, time
+
         response = get(f"https://www.opencve.io/api/vendors/{args.empresa[0]}/cve?page={args.page[0]}", auth=(args.auth[0], args.auth[1])).text
         data = loads(response)
         localtime = asctime( localtime(time()) )
@@ -85,6 +87,10 @@ try:  #manejo de errores por si no elige un programa.
         for key,value in info.items():
             print(key, "->",value)
 
+    elif args.d[0] == 'esc':
+        import prueba
+        prueba.ip()
+
     elif args.d[0] == 'encoder':
         from subprocess import run
         run(["bash", "encoder.sh"])
@@ -92,6 +98,7 @@ try:  #manejo de errores por si no elige un programa.
     elif args.d[0] == 'decoder':
         from subprocess import run
         run(["bash", "decoder.sh"])
+
     
 except TypeError:
     print("ERROR. Elige un programa y usa las banderas correctas del mismo.")
