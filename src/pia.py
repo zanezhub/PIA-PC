@@ -56,7 +56,7 @@ try:  #manejo de errores por si no elige un programa.
         try:
             mail = args.mail[0]
             key = args.key[0]
-            #  bd225a89d94f014d3fb98a7b6c2ecacf5be105dc
+            # lol - 1950000
 
             url = f"https://api.hunter.io/v2/email-verifier?email={mail}&api_key={key}"
             response = get(url).text
