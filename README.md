@@ -1,4 +1,32 @@
 # PIA
+## ¿Por qué elegir nuestra herramienta?
+
+Nuestra herramienta todo-en-uno está diseñada para brindarte una forma fácil y eficiente de realizar una amplia gama de tareas de análisis y seguridad. Con una serie de potentes funcionalidades integradas, esta aplicación es ideal tanto para desarrolladores como para profesionales de la seguridad cibernética que necesitan procesar, analizar y obtener información valiosa de manera rápida.
+
+### **Características destacadas:**
+
+- **Hash MD5:** Calcula y genera hashes MD5 de cualquier cadena o archivo, permitiéndote verificar la integridad de los datos o realizar comprobaciones de seguridad.
+  
+- **Hunter API:** Accede a la potente Hunter API para realizar búsquedas avanzadas de información relacionada con direcciones de correo electrónico, dominios y más.
+
+- **Base64:** Codifica y decodifica cadenas en Base64 fácilmente, lo que es útil para la manipulación y transferencia de datos binarios en aplicaciones web y sistemas.
+
+- **OpenCVE API:** Obtén información en tiempo real sobre vulnerabilidades de seguridad a través de la API de OpenCVE, lo que te permite mantenerte al tanto de las amenazas de seguridad más recientes.
+
+- **BuiltWith:** Realiza un análisis de tecnología en sitios web, obteniendo detalles sobre las herramientas y plataformas que utilizan, desde frameworks hasta soluciones de análisis y seguridad.
+
+- **Socket:** Facilita el análisis de redes y puertos mediante la capacidad de manejar conexiones de socket, lo que permite realizar pruebas de conectividad y verificar servicios de red de manera eficiente.
+
+### **¿Por qué usar esta herramienta?**
+
+- **Versatilidad:** Integra múltiples funciones en una sola plataforma, ahorrándote tiempo y esfuerzo al no tener que usar herramientas separadas para cada tarea.
+- **Simplicidad:** Con una interfaz intuitiva y fácil de usar, puedes realizar tareas complejas de manera sencilla y rápida.
+- **Actualización constante:** Con acceso a las últimas bases de datos y APIs, siempre tendrás la información más actualizada para tus análisis y tareas de seguridad.
+
+Ya sea que necesites verificar la integridad de archivos, explorar vulnerabilidades de seguridad o analizar tecnologías web, nuestra herramienta es la solución perfecta para ayudarte a hacer todo esto y mucho más de manera eficiente. ¡Empieza hoy mismo y optimiza tu flujo de trabajo!
+
+---
+
 Ingresa el siguiente comando en tu terminal si tienes alguna duda acerca de las --flags que usa el script y para qué sirve cada una:
 ```
 $ python3 pia.py -h
